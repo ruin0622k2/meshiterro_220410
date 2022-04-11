@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: "homes#top"
+  root to: 'homes#top'
   get "/homes/about" => "homes#about", as: "about"
-
 
 #onlyオプションを使用することで、生成するルーティングを限定できる
 #今回の場合、new,create,index,show以外のルーティングは行われない

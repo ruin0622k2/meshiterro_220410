@@ -1,12 +1,13 @@
 <!-- ユーザー詳細　-->
 <div>
-  <h3><%= @post_images.name %></h3>
-  <%= image_tag @post_images.get_profile_image(100, 100) %>
+  <h3><%= @user.name %></h3>
+  <%= image_tag @user.get_profile_image(100, 100) %>
+  <p><%= link_to "プロフィール編集", '/users/edit(user.id)' %></p>
 </div>
 
 <!--ユーザー投稿一覧 -->
 
-<% @user.each do |post_image| %>
+<% @post_images.each do |post_image| %>
 <div>
   <%= link_to post_image_path(post_image.id) do %>
     <%= image_tag post_image.get_image %>
